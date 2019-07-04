@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "name": "parceler",
+  "version": "1.0.0",
+  "description": "Use Parcel to manage and compile assets in Rails",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3"
+  }
+}
