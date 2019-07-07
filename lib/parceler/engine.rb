@@ -10,8 +10,12 @@ module Parceler
             @args.append("--experimental-scope-hoisting") if config.tree_shaking
         end
 
+        def getcmd(cmd = '')
+            return "yarn run parcel #{cmd} #{@args.join(' ')}"
+        end
+
         def execute(cmd = '')
-            exec("yarn run parcel #{cmd} #{@args.join(' ')}")
+            exec(self.getcmd(cmd))
         end
     end
 end

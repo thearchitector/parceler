@@ -20,6 +20,7 @@ Gem::Specification.new do |spec|
 		`git ls-files -z`.split("\x0")
 	end
 
-	spec.add_development_dependency "bundler", "~> 2.0"
-	spec.add_development_dependency "rake", "~> 10.0"
+	spec.add_runtime_dependency "posix-spawn"
+	spec.add_development_dependency "bundler"
+	spec.add_development_dependency "rake"
 end

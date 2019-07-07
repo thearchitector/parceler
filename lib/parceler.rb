@@ -1,5 +1,6 @@
 require "parceler/version"
 require "parceler/engine"
+require "parceler/railtie" if defined?(Rails)
 
 module Parceler
 	class Error < StandardError; end
@@ -28,14 +29,6 @@ module Parceler
 			@content_hashing = true
 			@autoresolve = false
 			@tree_shaking = false
-		end
-	end
-
-	class Railtie < ::Rails::Railtie
-        railtie_name :parceler
-
-        rake_tasks do
-          load 'parceler/tasks.rake'
 		end
 	end
 end

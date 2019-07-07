@@ -1,4 +1,9 @@
-namespace :parcel do
+namespace :parceler do
+    desc 'Installs the Parcel dependency with Yarn'
+    task install: :environment do
+        exec("yarn add parcel-bundler --dev")
+    end
+
     desc 'Launches a Parcel process for proactive compilation'
     task watch: :environment do
         Parceler.engine.execute(:watch)
@@ -11,9 +16,9 @@ namespace :parcel do
 end
 
 Rake::Task['assets:precompile'].enhance do
-    Rake::Task['parcel:compile'].invoke
+    Rake::Task['parceler:compile'].invoke
 end
 
 Rake::Task['assets:clobber'].enhance do
-    Rake::Task['parcel:clobber'].invoke
+    Rake::Task['parceler:clobber'].invoke
 end
