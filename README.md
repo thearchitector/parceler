@@ -1,18 +1,55 @@
 # Parceler
-![version](https://img.shields.io/gem/v/parceler.svg?label=version&style=flat-square)
 ![downloads](https://img.shields.io/gem/dv/parceler/stable.svg?label=downloads&style=flat-square)
+![version](https://img.shields.io/gem/v/parceler.svg?label=version&style=flat-square)
 
 Parceler attempts to be an alternative asset compiler and manager for [Ruby on Rails](https://rubyonrails.org/). It provides functionality similar to Rails' own [Webpacker gem](https://github.com/rails/webpacker), but is powered by [Parcel](https://parceljs.org/) rather than [Webpack](https://webpack.js.org/). While meant for Rails, nothing inhibits using this gem outside of a Rails context.
 
 ## Installation
-You can install this gem by adding it to your application's `Gemfile`:
+You can install this gem by adding it to your application's `Gemfile` via:
 
 ```ruby
-gem 'parceler', group: :development
+  gem 'parceler', group: :development
 ```
 
-It is also recommended that you create an config file so you can customize this gem's behavior to align with your own app. You can generate the default configuration initializer by running:
+This gem also requires a Node.js environment prepped with Yarn. You can install Node.js at https://nodejs.org/en/download/ and Yarn at https://yarnpkg.com/en/docs/install.
+
+To install the required Node packages, run the rake task `parceler:install`:
+
+```sh
+  $ bundle exec rake parceler:install
+```
+
+### Configuration
+Before this gem can bundle your app assets, it must be configured as to know where to place bundeled parcels. To do so, you must run `Parcel.configure` with a provided configuration block _before_ starting your app's server. The default configuration block that is packaged with this gem looks something like this:
+
+```rb
+# Configuration options defined here have direct relations to those defined in the official documentation.
+# https://parceljs.org/cli.html
+Parceler.configure do |c|
+    c.entry_point = "app/javascript/application.js"
+    c.destination = "public/parcels"
+    c.cache = nil
+    c.source_maps = false
+    c.autoresolve = false
+
+    # The following options only have an effect in production builds. You can parcel
+    # your assets for production with rake tasks `parceler:build` or `assets:precompile`.
+    c.minify = true
+    c.content_hashing = true
+    c.tree_shaking = false
+end
+```
+
+If you do not want to customize your app in any way, you can simply copy this block and everythig should work fine. _However_, it is very likely (and preferred) that you customize it to your particular needs.
+
+#### Configuration on Rails
+While the above steps are not explicitly required, it is _highly_ recommended that you create an config file so you can customize this gem's behavior to align with your own app. You can generate the default configuration initializer by running,
 
 ```sh
   $ rails g parceler
 ```
+
+which will place a new file at `config/initializers/parceler.rb`.
+
+## License
+This gem is released and published under the [3-Clause BSD License](https://opensource.org/licenses/BSD-3-Clause) by Elias Gabriel (@thearchitector).

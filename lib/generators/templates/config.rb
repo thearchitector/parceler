@@ -8,7 +8,7 @@ Parceler.configure do |c|
     c.autoresolve = false
 
     # The following options only have an effect in production builds. You can parcel
-    # your assets for production with rake tasks `parcel:build` or `assets:precompile`.
+    # your assets for production with rake tasks `parceler:build` or `assets:precompile`.
     c.minify = true
     c.content_hashing = true
     c.tree_shaking = false
