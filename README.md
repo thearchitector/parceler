@@ -1,8 +1,9 @@
 # Parceler
-![downloads](https://img.shields.io/gem/dv/parceler/stable.svg?label=downloads&style=flat-square)
 ![version](https://img.shields.io/gem/v/parceler.svg?label=version&style=flat-square)
+![downloads](https://img.shields.io/gem/dv/parceler/stable.svg?label=downloads&style=flat-square)
+![GitHub](https://img.shields.io/github/license/thearchitectoR/parceler.svg?style=flat-square)
 
-Parceler attempts to be an alternative asset compiler and manager for [Ruby on Rails](https://rubyonrails.org/). It provides functionality similar to Rails' own [Webpacker gem](https://github.com/rails/webpacker), but is powered by [Parcel](https://parceljs.org/) rather than [Webpack](https://webpack.js.org/). As a result, it is intended to require significantly less out-of-the-box configurationa at the cost of some more advanced features. While meant for Rails, nothing inhibits using this gem outside of a Rails context.
+Parceler attempts to be an alternative asset compiler and manager for [Ruby on Rails](https://rubyonrails.org/). It provides functionality similar to Rails' own [Webpacker gem](https://github.com/rails/webpacker), but is powered by [Parcel](https://parceljs.org/) rather than [Webpack](https://webpack.js.org/). As a result, it is intended to require significantly less out-of-the-box configuration at the cost of some more advanced features. While meant for Rails, nothing inhibits using this gem outside of a Rails context.
 
 ## Installation
 You can install this gem by adding it to your application's `Gemfile` via:
@@ -20,7 +21,7 @@ To install the required Node packages, run the rake task `parceler:install`:
 ```
 
 ### Configuration
-Before this gem can bundle your app assets, it must be configured as to know where to place bundeled parcels. To do so, you must run `Parcel.configure` with a provided configuration block _before_ starting your app's server. The default configuration block that is packaged with this gem looks something like this:
+Before this gem can bundle your app assets, it must be configured. To do so, you must run `Parceler.configure` with a provided configuration block _before_ starting your app's server. The default configuration block that is packaged with this gem looks something like this:
 
 ```rb
 # Configuration options defined here have direct relations to those defined in the official documentation.
@@ -43,13 +44,16 @@ end
 If you do not want to customize your app in any way, you can simply copy this block and everythig should work fine. _However_, it is very likely (and preferred) that you customize it to your particular needs.
 
 #### Configuration on Rails
-While the above steps are not explicitly required, it is _highly_ recommended that you create an config file so you can customize this gem's behavior to align with your own app. You can generate the default configuration initializer by running,
+While the above steps are not explicitly required, it is _highly_ recommended that you create a config file so you can customize this gem's behavior to align with your own app. You can generate the default configuration initializer by running,
 
 ```sh
   $ rails g parceler
 ```
 
 which will place a new file at `config/initializers/parceler.rb`.
+
+## Origin Story
+I built this gem while working on the MAIS™ business managment and information system developed by [sdbase](sdbase.com). At the time of development, we were looking at upgrading the entire stack from EOLed versions of Ruby and Rails to more recent releases. Throughout the process, I realized that the new asset management system (`webpacker`) was overly complicated for many of our applications, and as a result provided a reasonably steep learning curve to many of the burgeoning developers with which we were working. To mitigate those problems, and to simplify the engineering learning process, I built Parceler to require very little out-of-the-box configuration with very transparent functionality.
 
 ## License
 This gem is released and published under the [3-Clause BSD License](https://opensource.org/licenses/BSD-3-Clause) by Elias Gabriel (@thearchitector).
