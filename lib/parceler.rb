@@ -1,4 +1,3 @@
-require "parceler/version"
 require "parceler/engine"
 require "parceler/railtie" if defined?(Rails)
 
