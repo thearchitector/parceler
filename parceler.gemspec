@@ -1,10 +1,9 @@
 lib = File.expand_path("lib", __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "parceler/version"
 
 Gem::Specification.new do |spec|
 	spec.name          = "parceler"
-	spec.version       = Parceler::VERSION
+	spec.version       = "1.0.0"
 	spec.platform      = Gem::Platform::RUBY
 	spec.authors       = ["Elias Gabriel"]
 	spec.email         = ["me@eliasfgabriel.com"]
