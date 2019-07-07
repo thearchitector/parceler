@@ -1,7 +1,7 @@
 # Parceler
-![version](https://img.shields.io/gem/v/parceler.svg?label=version&style=flat-square)
-![downloads](https://img.shields.io/gem/dv/parceler/stable.svg?label=downloads&style=flat-square)
-![GitHub](https://img.shields.io/github/license/thearchitectoR/parceler.svg?style=flat-square)
+[![version](https://img.shields.io/gem/v/parceler.svg?label=version&style=flat-square)
+![downloads](https://img.shields.io/gem/dv/parceler/stable.svg?label=downloads&style=flat-square)](https://rubygems.org/gems/parceler)
+[![license](https://img.shields.io/github/license/thearchitectoR/parceler.svg?style=flat-square)](/LICENSE)
 
 Parceler attempts to be an alternative asset compiler and manager for [Ruby on Rails](https://rubyonrails.org/). It provides functionality similar to Rails' own [Webpacker gem](https://github.com/rails/webpacker), but is powered by [Parcel](https://parceljs.org/) rather than [Webpack](https://webpack.js.org/). As a result, it is intended to require significantly less out-of-the-box configuration at the cost of some more advanced features. While meant for Rails, nothing inhibits using this gem outside of a Rails context.
 
@@ -12,7 +12,7 @@ You can install this gem by adding it to your application's `Gemfile` via:
   gem 'parceler', group: :development
 ```
 
-This gem also requires a Node.js environment prepped with Yarn. You can install Node.js at https://nodejs.org/en/download/ and Yarn at https://yarnpkg.com/en/docs/install.
+This gem also requires a Node.js environment set up with Yarn. You can install Node.js at https://nodejs.org/en/download/ and Yarn at https://yarnpkg.com/en/docs/install.
 
 To install the required Node packages, run the rake task `parceler:install`:
 
