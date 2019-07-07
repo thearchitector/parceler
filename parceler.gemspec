@@ -10,6 +10,7 @@ Gem::Specification.new do |spec|
 	spec.summary       = "A Parcel-based asset manager"
 	spec.description   = "An alternative Parcel-powered asset manager and compiler, meant for Rails but built for Ruby."
 	spec.homepage      = "https://github.com/thearchitector/parceler"
+	spec.licenses      = ["BSD-3-Clause"]
 
 	spec.metadata["allowed_push_host"] = "https://rubygems.org"
 	spec.metadata["homepage_uri"] = spec.metadata["source_code_uri"] = spec.homepage
@@ -19,7 +20,7 @@ Gem::Specification.new do |spec|
 		`git ls-files -z`.split("\x0")
 	end
 
-	spec.add_runtime_dependency "posix-spawn"
-	spec.add_development_dependency "bundler"
-	spec.add_development_dependency "rake"
+	spec.add_runtime_dependency "posix-spawn", '~> 0.3'
+	spec.add_development_dependency "bundler", '~> 2.0'
+	spec.add_development_dependency "rake", '~> 10.0'
 end
