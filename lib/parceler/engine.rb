@@ -7,7 +7,7 @@ module Parceler
             @args.append("--no-content-hash") if !config.content_hashing
             @args.append("--no-autoinstall") if !config.autoresolve
             @args.append("--no-minify") if !config.minify
-            @args.append("--experimental-scope-hoisting") if config.tree_shaking
+            # @args.append("--experimental-scope-hoisting") if config.tree_shaking
         end
 
         def getcmd(cmd = '')
