@@ -17,7 +17,7 @@ module Parceler
 	# Configuration options defined here have direct relations to those defined in the official documentation
 	# https://parceljs.org/cli.html
 	class Configuration
-		attr_accessor :entry_point, :destination, :cache, :source_maps, :minify, :content_hashing, :autoresolve, :tree_shaking
+		attr_accessor :entry_point, :destination, :cache, :source_maps, :minify, :content_hashing, :autoresolve
 
 		def initialize
 			@entry_point = "app/javascript/application.js"
@@ -27,7 +27,6 @@ module Parceler
 			@minify = true
 			@content_hashing = true
 			@autoresolve = false
-			@tree_shaking = false
 		end
 	end
 end
