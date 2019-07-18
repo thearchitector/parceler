@@ -37,7 +37,6 @@ Parceler.configure do |c|
     # your assets for production with rake tasks `parceler:build` or `assets:precompile`.
     c.minify = true
     c.content_hashing = true
-    c.tree_shaking = false
 end
 ```
 
