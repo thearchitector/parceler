@@ -15,10 +15,14 @@ namespace :parceler do
     end
 end
 
-Rake::Task['assets:precompile'].enhance do
-    Rake::Task['parceler:compile'].invoke
+if Rake::Task.task_defined?('assets:precompile')
+    Rake::Task['assets:precompile'].enhance do
+        Rake::Task['parceler:compile'].invoke
+    end
 end
 
-Rake::Task['assets:clobber'].enhance do
-    Rake::Task['parceler:clobber'].invoke
+if Rake::Task.task_defined?('assets:clobber')
+    Rake::Task['assets:clobber'].enhance do
+        Rake::Task['parceler:clobber'].invoke
+    end
 end
