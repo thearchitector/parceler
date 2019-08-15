@@ -3,7 +3,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
 	spec.name          = "parceler"
-	spec.version       = "1.0.3"
+	spec.version       = "1.0.4"
 	spec.platform      = Gem::Platform::RUBY
 	spec.author        = "Elias Gabriel"
 	spec.email         = "me@eliasfgabriel.com"
