@@ -1,7 +1,7 @@
 # Parceler
 [![version](https://img.shields.io/gem/v/parceler.svg?label=version&style=flat-square)
 ![downloads](https://img.shields.io/gem/dt/parceler.svg?style=flat-square)](https://rubygems.org/gems/parceler)
-[![license](https://img.shields.io/github/license/thearchitectoR/parceler.svg?style=flat-square)](/LICENSE)
+![license](https://img.shields.io/badge/license-CC--BY--NC--SA--4.0-green)
 
 Parceler attempts to be an alternative asset compiler and manager for [Ruby on Rails](https://rubyonrails.org/). It provides functionality similar to Rails' own [Webpacker gem](https://github.com/rails/webpacker) but is powered by [Parcel](https://parceljs.org/) instead of [Webpack](https://webpack.js.org/). As a result and at the cost of some more advanced features, it requires significantly less out-of-the-box configuration. While meant for Rails, nothing inhibits using this gem outside of a Rails context.
 
@@ -55,4 +55,4 @@ While the above steps are not explicitly required, it is _highly_ recommended th
 I built this gem while working on the MAIS™ business managment and information system developed by [sdbase](sdbase.com). At the time of development, we were looking at upgrading the entire stack from EOLed versions of Ruby and Rails. Throughout the process, I realized that the new asset management system (`webpacker`) was overly complicated for many of our applications. As a result, it provided a reasonably steep learning curve to many of the burgeoning developers with which we were working. To mitigate those problems and to simplify the engineering learning process, I built Parceler to require very little out-of-the-box configuration while maintaining very transparent functionality.
 
 ## License
-This gem is released and published under the [3-Clause BSD License](https://opensource.org/licenses/BSD-3-Clause) by Elias Gabriel (@thearchitector).
+This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
