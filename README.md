@@ -1,7 +1,7 @@
 # Parceler
 [![version](https://img.shields.io/gem/v/parceler.svg?label=version&style=flat-square)
 ![downloads](https://img.shields.io/gem/dt/parceler.svg?style=flat-square)](https://rubygems.org/gems/parceler)
-![license](https://img.shields.io/badge/license-CC--BY--NC--SA--4.0-green)
+![license](https://img.shields.io/badge/license-CC--BY--NC--SA--4.0-green?style=flat-square)
 
 Parceler attempts to be an alternative asset compiler and manager for [Ruby on Rails](https://rubyonrails.org/). It provides functionality similar to Rails' own [Webpacker gem](https://github.com/rails/webpacker) but is powered by [Parcel](https://parceljs.org/) instead of [Webpack](https://webpack.js.org/). As a result and at the cost of some more advanced features, it requires significantly less out-of-the-box configuration. While meant for Rails, nothing inhibits using this gem outside of a Rails context.
 
